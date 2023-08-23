@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_bucket_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card_view_bucket_icon_container"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            tools:text="The Title" />
+
+        <TextView
+            android:id="@+id/text_view_bucket_description"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_bucket_title"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#222000"
+            android:textSize="14sp"
+            tools:text="The Description" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_bucket_icon_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_toEndOf="@id/text_view_bucket_title"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/image_view_bucket_icon"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/amazon" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
