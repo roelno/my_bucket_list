@@ -28,7 +28,7 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout., parent, false);
+                .inflate(R.layout.item_bucket, parent, false);
         return new ViewHolder(view);
     }
 
@@ -57,9 +57,9 @@ public class BucketAdapter extends RecyclerView.Adapter<BucketAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            bucketTitle = itemView.findViewById();
-            bucketDescription = itemView.findViewById();
-            bucketImage = itemView.findViewById();
+            bucketTitle = itemView.findViewById(R.id.text_view_bucket_title);
+            bucketDescription = itemView.findViewById(R.id.text_view_bucket_description);
+            bucketImage = itemView.findViewById(R.id.image_view_bucket_icon);
         }
 
         public TextView getBucketTitle() {
